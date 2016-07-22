@@ -1,0 +1,52 @@
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hintstyle:  hintfull
+
+urxvt*loginShell:         true
+urxvt*saveLines:         65535
+urxvt*urgentOnBell:       true
+!urxvt*override-redirect:false
+
+! Scrollbar
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common: default,matcher,resize-font,selection-to-clipboard
+URxvt.url-launcher: chromium
+URxvt.matcher.button: 1
+
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+! Transparency
+URxvt.transparent: true
+URxvt.shading: 20
+URxvt.fading:  30
+
+URxvt.background:               #1b1b1b
+URxvt.foreground:               #FFFFFF
+URxvt.colorBD:                  #CFCFCF
+URxvt.colorUL:                  #969696
+URxvt.colorIT:                  #686868
+
+ 
+! Border
+URxvt.internalBorder:       5
+
+! Font
+urxvt*font: xft:Inconsolata:size=9
+
+! do not scroll with output
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
