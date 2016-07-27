@@ -1,0 +1,17 @@
+[2016-07-27 20:50:05] WeeChat 1.4 (compilato il Mar 14 2016 07:45:29)
+[2016-07-27 20:50:05] Lettura del file di configurazione sec.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione weechat.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione plugins.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione charset.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione logger.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione exec.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione trigger.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione aspell.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione alias.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione xfer.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione irc.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione relay.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione buffers.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione iset.conf
+[2016-07-27 20:50:05] Lettura del file di configurazione script.conf
+[2016-07-27 20:50:05] irc: connessione al server chat.freenode.net/6697 (SSL)...
