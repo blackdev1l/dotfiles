@@ -1,3 +1,4 @@
+URxvt.termName: xterm-256color
 Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
@@ -12,9 +13,11 @@ urxvt*urgentOnBell:       true
 URxvt.scrollBar:            false
 
 ! Perl extensions
-URxvt.perl-ext-common: default,matcher,resize-font,selection-to-clipboard
-URxvt.url-launcher: chromium
+URxvt.perl-ext-common: default,matcher,resize-font,selection-to-clipboard,url-select
+URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
+URxvt.keysym.M-u: perl:url-select:select_next
+
 
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger: C-Up
@@ -44,7 +47,7 @@ URxvt.colorIT:                  #686868
 URxvt.internalBorder:       5
 
 ! Font
-urxvt*font: xft:Inconsolata:size=9
+urxvt*font: xft:Inconsolata:size=13
 
 ! do not scroll with output
 URxvt*scrollTtyOutput:      false
