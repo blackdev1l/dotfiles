@@ -21,6 +21,7 @@ set nocompatible               " be iMproved
  Plugin 'fatih/vim-go'
  Plugin 'kien/ctrlp.vim'
  Plugin 'majutsushi/tagbar'
+ Plugin 'omasr/molokai'
  call vundle#end()
 
 colors molokai
