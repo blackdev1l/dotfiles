@@ -1,0 +1,8 @@
+[user]
+	email = blackdev1l@autistici.org
+	name = Cristian Achille
+	signingkey = 4C142D96
+[commit]
+	gpgsign = true
+[credential]
+	helper = store
