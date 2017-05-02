@@ -1,17 +1,17 @@
-[2016-07-27 20:50:05] WeeChat 1.4 (compilato il Mar 14 2016 07:45:29)
-[2016-07-27 20:50:05] Lettura del file di configurazione sec.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione weechat.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione plugins.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione charset.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione logger.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione exec.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione trigger.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione aspell.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione alias.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione xfer.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione irc.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione relay.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione buffers.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione iset.conf
-[2016-07-27 20:50:05] Lettura del file di configurazione script.conf
-[2016-07-27 20:50:05] irc: connessione al server chat.freenode.net/6697 (SSL)...
+[2017-05-02 09:44:27] WeeChat 1.4 (compiled on Apr 26 2017 18:10:49)
+[2017-05-02 09:44:27] Reading configuration file sec.conf
+[2017-05-02 09:44:27] Reading configuration file weechat.conf
+[2017-05-02 09:44:27] Reading configuration file plugins.conf
+[2017-05-02 09:44:27] Reading configuration file charset.conf
+[2017-05-02 09:44:27] Reading configuration file logger.conf
+[2017-05-02 09:44:27] Reading configuration file exec.conf
+[2017-05-02 09:44:27] Reading configuration file trigger.conf
+[2017-05-02 09:44:27] Reading configuration file aspell.conf
+[2017-05-02 09:44:27] Reading configuration file alias.conf
+[2017-05-02 09:44:27] Reading configuration file xfer.conf
+[2017-05-02 09:44:27] Reading configuration file irc.conf
+[2017-05-02 09:44:27] Reading configuration file relay.conf
+[2017-05-02 09:44:27] Reading configuration file buffers.conf
+[2017-05-02 09:44:27] Reading configuration file iset.conf
+[2017-05-02 09:44:27] Reading configuration file script.conf
+[2017-05-02 09:44:27] irc: connecting to server chat.freenode.net/6697 (SSL)...

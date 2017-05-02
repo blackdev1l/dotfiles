@@ -1,1 +1,4 @@
 .weechat/secret
+.weechat/logs/*
+.weechat/weechat.log
+
