@@ -174,11 +174,13 @@ bindsym $mod+r mode "resize"
 
 # hide titlebar
 for_window [class="^.*"] border pixel 0
+# telegram in resize mode
+for_window [class=TelegramDesktop] resize set width 501, move left
 
 # Open apps in particular workspace
 assign [class=firefox|KeePassXC|qBittorrent] $ws2
 assign [class=code|Emacs] $ws3
-assign [class=Pcmanfm] $ws4
+assign [class=Thunar] $ws4
 assign [class="mpv"] $ws6
 # Gaps
 gaps inner 5
@@ -194,6 +196,14 @@ smart_borders no_gaps
 # Execute on startup
 exec --no-startup-id /usr/lib/gsd-xsettings
 exec --no-startup-id gnome-flashback
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id compton
+exec --no-startup-id picom
 exec --no-startup-id emacs --daemon
+exec --no-startup-id wal -i $HOME/pictures/fox.jpg
+exec --no-startup-id telegram-desktop
+exec --no-startup-id firefox
+
+
+# Layout
+exec --no-startup-id "i3-msg 'workspace 2; append_layout $HOME/.config/i3/workspace-2.json'"

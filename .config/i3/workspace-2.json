@@ -1,0 +1,46 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1402,
+       "width": 501,
+       "x": 9,
+       "y": 29
+    },
+    "name": "Telegram (15391)",
+    "percent": 0.2,
+    "swallows": [
+       {
+           "class": "^TelegramDesktop$",
+       // "instance": "^telegram\\-desktop$",
+       // "title": "^Telegram\\ \\(15391\\)$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1402,
+       "width": 2037,
+       "x": 0,
+       "y": 0
+    },
+    "name": "i3 4.8 introduces layout saving and restoring : archlinux - Mozilla Firefox",
+    "percent": 0.8,
+    "swallows": [
+       {
+        "class": "^firefox$",
+       // "instance": "^Navigator$",
+       // "title": "^i3\\ 4\\.8\\ introduces\\ layout\\ saving\\ and\\ restoring\\ \\:\\ archlinux\\ \\-\\ Mozilla\\ Firefox$",
+       // "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
