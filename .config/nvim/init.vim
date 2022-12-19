@@ -32,7 +32,7 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
 
     Plug 'preservim/nerdtree'
-    Plug 'mkitt/tabline.vim'
+    Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 
 
     " Clojure 
@@ -47,9 +47,10 @@ call plug#begin()
 
 
     " Snippets
-    Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 
+
+    Plug 'puremourning/vimspector'
     call plug#end()
 
 colors molokai
@@ -70,7 +71,7 @@ noremap <Leader>v :<C-u>vsplit<CR>
 " airline 
 let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 "Telescope
 " Find files using Telescope command-line sugar.
@@ -101,6 +102,27 @@ set updatetime=300
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved
 set signcolumn=yes
+
+
+" Applying code actions to the selected code block
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap keys for applying code actions at the cursor position
+nmap <leader>ac  <Plug>(coc-codeaction-cursor)
+" Remap keys for apply code actions affect whole buffer
+nmap <leader>as  <Plug>(coc-codeaction-source)
+" Apply the most preferred quickfix action to fix diagnostic on the current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Remap keys for applying refactor code actions
+nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
+xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+
+" Run the Code Lens action on the current line
+nmap <leader>cl  <Plug>(coc-codelens-action)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -138,3 +160,6 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
+lua << EOF
+require("bufferline").setup{}
+EOF

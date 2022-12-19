@@ -5,6 +5,10 @@
       "rootPatterns": ["go.mod"],
       "trace.server": "verbose",
       "filetypes": ["go"]
+    },
+    "kotlin": {
+      "command": "~/kotlin-lsp/bin/kotlin-language-server",
+      "filetypes": ["kotlin"]
     }
   }
 }
