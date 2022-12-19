@@ -18,7 +18,7 @@ call plug#begin()
     " Appearance
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'ryanoasis/vim-devicons'
+    Plug 'nvim-tree/nvim-web-devicons'
     Plug 'tomasr/molokai'
     
 
@@ -27,13 +27,13 @@ call plug#begin()
     Plug 'jiangmiao/auto-pairs'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+    Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
     
     " Git
+    Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
 
-    Plug 'preservim/nerdtree'
-    Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
-
+    Plug 'nvim-tree/nvim-tree.lua'
 
     " Clojure 
     Plug 'Olical/conjure'
@@ -71,21 +71,26 @@ noremap <Leader>v :<C-u>vsplit<CR>
 " airline 
 let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 
 "Telescope
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fc <cmd>Telescope commands<cr>
 
 " NerdTree 
-imap <F2> <ESC> :NERDTreeToggle<CR>
-nmap <F2> :NERDTreeToggle<CR>
+imap <F2> <ESC> :NvimTreeToggle<CR>
+nmap <F2> :NvimTreeToggle<CR>
 
 " edit vimrc and zshrc
-nnoremap <leader>ev :e ~/.config/nvim/init.vim<CR>
+if has('win32')
+    nnoremap <leader>ev :e C:\Users\cristian.achille\AppData\Local\nvim\init.vim<CR>
+else
+    nnoremap <leader>ev :e ~/.config/nvim/init.vim<CR>
+endif
 nnoremap <leader>ez :e ~/.zshrc<CR>
 
 
@@ -103,6 +108,14 @@ set updatetime=300
 " diagnostics appear/become resolved
 set signcolumn=yes
 
+" Go
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+let g:go_def_mapping_enabled = 0
 
 " Applying code actions to the selected code block
 " Example: `<leader>aap` for current paragraph
@@ -160,6 +173,38 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
+" Terminal
+
+" set
+"autocmd TermEnter term://*toggleterm#*
+"      \ tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+
+" By applying the mappings this way you can pass a count to your
+" mapping to open a specific window.
+" For example: 2<C-t> will open terminal 2
+nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
+
 lua << EOF
-require("bufferline").setup{}
+require("toggleterm").setup{}
+require("telescope").setup {
+  defaults = {
+   file_ignore_patterns = { 
+       "node_modules/*", 
+       ".git/*" ,
+       ".class",
+       ".exe"
+   }
+  }
+}
+
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
+
+
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+-- empty setup using defaults
+require("nvim-tree").setup()
 EOF

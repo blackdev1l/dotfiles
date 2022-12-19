@@ -1,14 +1,9 @@
 {
-  "languageserver": {
-    "go": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "trace.server": "verbose",
-      "filetypes": ["go"]
-    },
-    "kotlin": {
-      "command": "~/kotlin-lsp/bin/kotlin-language-server",
-      "filetypes": ["kotlin"]
+    "languageserver": {
+        "golang": {
+        "command": "gopls",
+        "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+        "filetypes": ["go"]
+        }
     }
-  }
 }
